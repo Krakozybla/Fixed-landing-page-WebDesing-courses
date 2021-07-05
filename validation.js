@@ -26,16 +26,22 @@ function createSubscribWind(link){
 
     subscrForm.addEventListener('submit', function(e){
         let isErr = false;
-        inputs.forEach(elem=>{
+        inputs.forEach((elem,idx) =>{
             const valElem = elem.value.trim();
             let pattrn = patterns[elem.dataset.validation];
               if(!pattrn.test(valElem)){
                   elem.classList.add('err');
                   isErr = true;
+              }else{
+                err.innerHTML = '';
               }
         })
         if(isErr){
             e.preventDefault();
+            let err = document.createElement('span');
+            err.className = 'not-validated';
+            err.innerHTML = 'Correctly writte data!'
+            subscrForm.appendChild(err);
         }
     })
 }
@@ -78,6 +84,7 @@ form.addEventListener('submit', function(e){
             map = true;
         }else{
             modalWindow.classList.remove("modal-window__open");
+            message.innerHTML = "";
         }
     })
     if(map){
