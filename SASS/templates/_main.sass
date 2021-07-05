@@ -1,0 +1,137 @@
+.main
+    position: relative
+    &-container
+        max-width: 1120px
+        padding-left: 10px
+        padding-right: 10px
+        margin: auto
+    &-overlay
+        width: 1290px
+        height: 700px
+        z-index: -99
+        background: $secondary-bkcg
+        mix-blend-mode: normal
+        position: absolute
+        top: 0
+        left: 0
+        opacity: 5%
+        border-radius: 0px 20px 20px 0px
+    &-wrapper
+        padding-top: 134px
+    &-title
+        font-style: normal
+        font-weight: bold
+        font-size: 60px
+        line-height: 68px
+        letter-spacing: -1px
+    &-subtitle
+        margin-top: 20px
+        font-style: normal
+        font-weight: normal
+        font-size: 20px
+        line-height: 30px
+    &-button
+        margin-top: 40px
+        padding: 20px 50px
+        background: $secondary-bkcg
+        color: $light
+        font-style: normal  
+        font-weight: bold
+        font-size: 20px
+        line-height: 25px
+        border: none
+        border-radius: 33px
+        cursor: pointer
+.video
+    position: relative
+    &-wrapper
+        position: absolute
+        max-width: 760px
+        top: 19%
+        right: 0
+    &__player
+        width: 100%
+        box-shadow: 0px 32px 44px #818A8C
+        overflow: hidden
+        border-radius: 20px 0px 0px 20px
+    &__start
+        padding-top: 33px
+        padding-bottom: 33px
+        padding-left: 30px
+        padding-right: 25px
+        position: absolute
+        top: 50%
+        bottom: 50%
+        right: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        border: none
+        border-radius: 50%
+        font-size: 1.5em
+        display: flex
+        justify-content: center
+        align-items: center
+        cursor: pointer
+        color: $text-color
+        display: none
+    &__pause
+        padding-top: 33px
+        padding-bottom: 33px
+        padding-left: 30px
+        padding-right: 30px
+        position: absolute
+        top: 50%
+        bottom: 50%
+        right: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        border: none
+        border-radius: 50%
+        font-size: 1.5em
+        display: flex
+        justify-content: center
+        align-items: center
+        cursor: pointer
+        color: $text-color
+        display: none
+        z-index: -2
+.followers
+    margin-top: 100px
+    padding-bottom: 200px
+    display: flex
+    align-items: center
+    position: relative
+    &__link
+        &-one
+            position: absolute
+        &-two
+            position: absolute
+            left: 35px
+        &-three
+            position: absolute
+            left: 65px
+    &__icon
+        width: 50px
+        min-height: 50px
+        object-fit: cover
+    &__description
+        margin-left: 120px
+        font-style: normal
+        font-weight: normal
+        font-size: 16px
+        line-height: 20px
+.description__link
+    color: $secondary-bkcg !important
+    font-weight: bolder
+.video-wrapper:hover .video__start 
+    display: flex
+    z-index: 399
+.video-wrapper:hover .video__pause
+    display: flex
+    z-index: -2
+.video__pause-show
+    z-index: 2 !important
+.video-start__hiden
+    display: none !important
+
+
